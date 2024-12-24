@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.timer-container {
+  height: 100vh;
+}
+
+#functional-timer-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+#timer-sun,
+#timer-moon {
+  font-size: 2rem;
+  padding-right: 26px;
+  padding-top: 16px;
+  transition: 0.5s all linear;
+}
+
+#timer-sun {
+  color: #fff;
+  transform-origin: center;
+}
+
+#timer-moon {
+  color: black;
+}
+
+#timer-sun:hover {
+  cursor: pointer;
+  color: #9e78cf;
+  transform: scale(1.2) rotate(100deg) translate(40%, -10%);
+}
+
+.timer-text {
+  font-size: 96px;
+  color: #f8f8fc;
+}
+
+#timer-buttons-wrapper {
+  margin-top: 16px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background-color: #1d1825 !important;
+}
+
+#timer-seconds {
+  font-size: 64px !important;
+}
+
+.timer-animation {
+  color: red;
+  animation-fill-mode: both;
+  animation: timerAnimation 1s infinite ease-in-out;
+}
+
+@keyframes timerAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #timer-buttons-wrapper {
+    padding: 10px 20px;
+  }
+
+  #timer-sun,
+  #timer-moon {
+    font-size: 1.5rem;
+  }
+
+  .timer-text {
+    font-size: 64px;
+  }
+
+  #timer-seconds {
+    font-size: 48px !important;
+  }
+
+  #timer-buttons-wrapper {
+    padding: 10px 20px;
+  }
+
+  #timer-buttons-wrapper button {
+    font-size: 1.5rem;
+  }
+
+  #timer-sun {
+    margin-right: 20px;
+  }
+}
